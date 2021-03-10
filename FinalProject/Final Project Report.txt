@@ -1,0 +1,40 @@
+Andrew Logue 12/8/19
+
+FINAL PROJECT REPORT
+
+1)  Changing the length of the target phrase makes the algorithm a iterate through 
+    more generations at an exponential rate relative to the length of the target
+    phrase.
+
+2)  Changing the number of population members drastically changes the efficiency of
+    the algorithm. When I increased it from 200 to 2000, the efficiency of the
+    algorithm increase dramatically. After 2000 however, I began to see diminishing
+    returns. When increased to greater than 10000, the algorithm was able to find
+    the target value very quickly, sometimes in less than 60 generations.
+
+3)  Increasing the mutation rate made the algorithm less efficient at an exponential
+    rate. the best values to have the mutation rate at was less than 3%.
+
+4)  Changing the number of characters considered does not have much of an effect 
+    when the number of population members is high, but when the population is low
+    it decreases the efficiency noticably.
+
+5)  Method 2 works best, however I made a third method that has the highest effeciency
+    rate out of all of them.
+
+6)  Changing the mating factor would increase the length of the mating pool as more
+    tickets would be added, I did not notice much benifit from changing it, as the
+    proportion of tickets in the mating pool stayed the same. The optimal mating factor
+    was about 10. 
+
+7)  The fitness increases drastically over the first 20-30 generations then begins to
+    plateau.
+
+8)  buildMatingPool() has the longest runtime, I can't see any way it's runtime can
+    be improved other than decreasing the population size.
+
+exponentialFactor makes the difference bewteen the fitness values greater, however 
+since it also makes the fitness values smaller, less tickets are put in overall. In
+order to negate this, the math for calculating tickets must be altered (increase the
+mating factor). I found that the larger you increased the exponentialFactor after around 2-3 the fitness values
+got too small and harder to work with.
